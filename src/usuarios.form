@@ -23,7 +23,7 @@
               <tabbedpane title="Visualizar Productos"/>
             </constraints>
             <properties/>
-            <border type="none" title="SADS"/>
+            <border type="none" title="Nombre                                    Descripcion                              Precio"/>
             <children>
               <component id="ea329" class="javax.swing.JTable" binding="table1">
                 <constraints>
@@ -49,7 +49,7 @@
               <tabbedpane title="Productos Stock &lt;= 20"/>
             </constraints>
             <properties/>
-            <border type="none" title="SKDASK"/>
+            <border type="none" title="Nombre                       Descripcion                Precio                           Stock"/>
             <children>
               <component id="33342" class="javax.swing.JTable" binding="table2">
                 <constraints>
