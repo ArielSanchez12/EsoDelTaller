@@ -101,7 +101,7 @@ public class administrador extends conexion{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try (Connection conn = connect()) {
-                    String sql = "SELECT id_producto, nombre, descripcion, precio, stock FROM productos WHERE stock <= 20";
+                    String sql = "SELECT id_producto, nombre, descripcion, precio, stock FROM productos";
                     PreparedStatement pstmt = conn.prepareStatement(sql);
                     ResultSet resultSet = pstmt.executeQuery();
 
@@ -129,9 +129,8 @@ public class administrador extends conexion{
                         modelo.addRow(fila);
                     }
 
-                    // Mostrar mensaje si no hay productos con stock <= 20
                     if (!hayResultados) {
-                        JOptionPane.showMessageDialog(null, "No existen productos con stock <= 20");
+                        JOptionPane.showMessageDialog(null, "No existen productos registrados");
                     }
 
                     // Asignar el modelo a la tabla

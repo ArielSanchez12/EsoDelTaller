@@ -65,9 +65,18 @@ public class login extends conexion {
                                 menuFrame.setVisible(true);
 
                             }else if (rol.equals("usuario")) {
-                                System.out.println("pipipi");
+
+                                JFrame menuFrame = new JFrame("Pantalla de Usuario");
+                                menuFrame.setContentPane(new usuarios().ventana_usuario);
+                                menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                                menuFrame.setSize(500, 300);
+                                menuFrame.setPreferredSize(new Dimension(500, 300));
+                                menuFrame.setLocationRelativeTo(null);
+                                menuFrame.pack();
+                                menuFrame.setVisible(true);
+
                             }else {
-                                JOptionPane.showMessageDialog(null, "No existe ese usuario en el rol actual, prueba con otro rol222");
+                                JOptionPane.showMessageDialog(null, "No existe ese usuario en el rol actual, prueba con otro rol");
                             }
 
                         } else {
